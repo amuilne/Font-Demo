@@ -1,0 +1,219 @@
+:root {
+    --ff-sans-serif: "Europa";
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-400: hsl(0, 0%, 44%);
+    --clr-neutral-500: hsl(0, 0%, 39%);
+    --clr-neutral-900: hsl(0, 0%, 0%);
+    --clr-primary-100: hsl(214, 35%, 92%);
+    --clr-primary-900: hsl(210, 50%, 40%);
+    --clr-accent-link: hsl(0, 87%, 62%);
+    --clr-accent-body: hsl(49, 100%, 50%);
+    
+    --border: 2px solid var(--clr-neutral-400);
+}
+
+/* reset */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    overflow-wrap: break-word;
+    hyphens: manual;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+  
+  body {
+    line-height: 1.5;
+    font-size: 1.25rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  ul[class] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+  }  
+  /* End Reset */
+
+
+/* demo util styles */
+.container {
+    width: 80%;
+    padding: 1rem;
+    margin-inline: auto;
+    background-color: var(--clr-neutral-100);
+    border: var(--border);
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.split {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.split > * {
+    flex-basis: 50%;
+}
+
+.stack > * + * {
+    margin-block-start: 1rem;
+}
+
+.dark {
+    padding: 1rem;
+    background-color: var(--clr-primary-900);
+    color: var(--clr-neutral-100);
+}
+
+.grey {
+    padding: 1rem;
+    background-color: var(--clr-neutral-400);
+    color: var(--clr-neutral-100);
+}
+
+
+/* Colours */
+.accent {
+    color: var(--clr-accent-body);
+  }
+  
+  .subtitle {
+    color: var(--clr-neutral-500);
+  }
+  
+  a {
+    color: inherit;
+  }
+  /* End Colours */
+
+/* typography */
+body {
+    font-family: var(--ff-sans-serif);
+    font-weight: 300;
+    background-color: var(--clr-primary-100);
+}
+
+nav a, footer a, .btn {
+    text-decoration: none;
+  } 
+
+a {
+    color: inherit;
+}
+
+a:hover, a:focus {
+    color: var(--clr-accent-link);
+}
+
+/* default button */
+.btn {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-accent-link);
+    padding: 0.25rem 0.75rem;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.btn:hover, .btn:focus {
+    color: var(--clr-accent-link);
+    background-color: var(--clr-neutral-100);
+}
+/* End default button */
+
+.btn__nav {
+    background-color: transparent;
+    border: 2px solid var(--clr-neutral-100);
+    padding: 0.25rem 0.75rem;
+}
+
+.btn__light {
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-100);
+    border: 2px solid var(--clr-neutral-500);
+}
+
+.btn__light:hover, .btn__light:focus,
+.btn__accent:hover, .btn__accent:focus {
+    border-color: var(--clr-accent-link);
+    background-color: var(--clr-neutral-100);
+}
+
+.btn__accent:hover, .btn__accent:focus {
+    border: 2px solid var(--clr-accent-link)
+}
+
+/* Cancel and Save Buttons */
+form button {
+    font: inherit;
+    background-color: var(--clr-neutral-100);
+    border: 2px solid var(--clr-neutral-500);
+    padding: 1rem 2rem;
+}
+
+form button:hover, form button:focus {
+    border-color: var(--clr-accent-link);
+}
+  
+.btn__cancel {
+    color: var(--clr-accent-link);
+}
+  
+.btn__cancel:hover, .btn__cancel:focus {
+    border-color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-accent-body);
+}
+/***************** 
+End Buttons 
+*****************/
