@@ -1,5 +1,6 @@
 const path = require('path')
 const http = require('http')
+const process = require('process')
 
 const express = require('express')
 // templating tools -> handlebars in express
@@ -8,10 +9,19 @@ const hbs = require('hbs')
 const app = express()
 const server = http.createServer(app)
 
-const port = 3000
+let port = 3000
 
 const viewsPath = path.join(__dirname, './templates/views')
 const partialsPath = path.join(__dirname, './templates/partials')
+
+// Process the command line arguments
+const foundPort = process.argv.findIndex(item => item === '--port') + 1
+if (foundPort > 0 &&
+    foundPort < process.argv.length &&
+    Number(process.argv[foundPort]) > 0 &&
+    Number(process.argv[foundPort]) < 65535
+    )
+    port = Number(process.argv[foundPort])
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs')
