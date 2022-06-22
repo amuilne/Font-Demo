@@ -29,7 +29,8 @@ app.route("/inter")
     .get(function (req, res, rext) {
         res.render('comparrison', {
             title: "Inter",
-            font: "Inter"
+            font: "Inter",
+            class: "Inter"
         })
     })
 
@@ -37,7 +38,8 @@ app.route("/nunito")
     .get(function (req, res, rext) {
         res.render('comparrison', {
             title: "Nunito",
-            font: "Nunito"
+            font: "Nunito",
+            class: "Nunito"
         })
     })
 
@@ -45,11 +47,82 @@ app.route("/lato")
     .get(function (req, res, rext) {
         res.render('comparrison', {
             title: "Lato",
-            font: "Lato"
+            font: "Lato",
+            class: "Lato"
         })
     })
 
+app.route("/avenirnext")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Avenir Next",
+            font: "Avenir Next",
+            class: "AvenirNext"
+        })
+    })
 
+app.route("/sailec")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Sailec",
+            font: "Sailec",
+            class: "Sailec"
+        })
+    })
+
+app.route("/cast")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Cast",
+            font: "Cast",
+            class: "Cast"
+        })
+    })
+
+app.route("/monolith")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Monolith Sans",
+            font: "Monolith Sans",
+            class: "monolith"
+        })
+    })
+
+app.route("/treyton")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Treyton Regular",
+            font: "Treyton Regular",
+            class: "Treyton"
+        })
+    })
+
+app.route("/groteska")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Groteska Regular",
+            font: "Groteska Regular",
+            class: "groteska"
+        })
+    })
+
+app.route("/einergroteska")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Einer Groteska",
+            font: "Einer Groteska",
+            class: "einergroteska"
+        })
+    })
+
+    app.route("/gilroy")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Gilroy Light",
+            font: "Gilroy Light",
+            class: "gilroy"
+        })
+    })
 
 app.use(express.static(__dirname))
 

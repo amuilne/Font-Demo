@@ -141,7 +141,6 @@
 /* typography */
 body {
     font-family: var(--ff-sans-serif);
-    font-weight: 300;
     background-color: var(--clr-primary-100);
 }
 
