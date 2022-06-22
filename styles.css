@@ -140,7 +140,7 @@
 
 /* typography */
 body {
-    font-family: var(--ff-sans-serif);
+    font-family: var(--ff-sans-serif), sans-serif;
     background-color: var(--clr-primary-100);
 }
 
