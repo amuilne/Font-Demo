@@ -115,7 +115,7 @@ app.route("/einergroteska")
         })
     })
 
-    app.route("/gilroy")
+app.route("/gilroy")
     .get(function (req, res, rext) {
         res.render('comparrison', {
             title: "Gilroy Light",
@@ -123,6 +123,25 @@ app.route("/einergroteska")
             class: "gilroy"
         })
     })
+
+app.route("/albori")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Albori Sans",
+            font: "Albori Sans",
+            class: "albori"
+        })
+    })
+
+app.route("/celesta")
+    .get(function (req, res, rext) {
+        res.render('comparrison', {
+            title: "Celesta",
+            font: "Celesta",
+            class: "Celesta"
+        })
+    })
+
 
 app.use(express.static(__dirname))
 
